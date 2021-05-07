@@ -1,0 +1,57 @@
+
+<app-header-nav pageName={{itemLanguage.TitlePage}} isBackButton="true" ></app-header-nav>
+
+
+
+<ion-content [fullscreen]="true">
+
+
+    <form [formGroup]="appForm">
+
+    <ion-list>
+     
+
+        <ion-item class="item-form">
+            <ion-label position="floating">{{itemLanguage.ReferenceNumber}}</ion-label>
+            <ion-input type="text" formControlName="referenceNumber"></ion-input>
+        </ion-item>
+
+        <!-- <ion-item class="item-form">
+        <ion-label position="floating">Description</ion-label>
+        <ion-textarea></ion-textarea>
+        </ion-item> -->
+
+        <ion-item class="item-form">
+            <ion-label position="floating">{{itemLanguage.Description}}</ion-label>
+            <ion-input type="text" formControlName="description"></ion-input>
+        </ion-item>
+
+        <ion-item class="item-form">
+            <ion-label position="floating">{{itemLanguage.Site}}</ion-label>
+            <ion-select formControlName="site">
+                <ion-select-option>Bulacan</ion-select-option>
+                <ion-select-option>Quezon City</ion-select-option>
+                <ion-select-option>Manila</ion-select-option>
+            </ion-select>
+
+        </ion-item>
+
+
+        
+    </ion-list>
+
+    </form> 
+
+   
+
+
+
+</ion-content>
+    
+
+<ion-footer>
+    <ion-button expand="full" (click)="approve()" >
+        {{commonText.BtnSubmit}}
+    </ion-button>
+
+</ion-footer>

@@ -1,0 +1,113 @@
+
+<app-header-nav homeHeader="true" headerText="{{headerText}}" clock="{{clock}}"></app-header-nav>
+
+
+<ion-content [fullscreen]="true">
+
+
+    <ion-slides [pager]="true">
+
+        <ion-slide>
+
+            <canvas baseChart
+                    [datasets]="barChartData"
+                    [labels]="barChartLabels"
+                    [options]="barChartOptions"
+                    [plugins]="barChartPlugins"
+                    [legend]="barChartLegend"
+                    [chartType]="barChartType"></canvas>
+        </ion-slide>
+
+        <ion-slide>
+            <canvas baseChart
+                    [data]="pieChartData"
+                    [labels]="pieChartLabels"
+                    [chartType]="pieChartType"
+                    [options]="pieChartOptions"
+                    [plugins]="pieChartPlugins"
+                    [colors]="pieChartColors"
+                    [legend]="pieChartLegend"></canvas>
+
+        </ion-slide>
+
+    </ion-slides>
+
+
+
+    <ion-grid>
+        <ion-row>
+            <ion-col col-4>
+                <ion-card>
+                    <ion-card-content>
+                        <button block ion-button (click)="openPage('my-request')">
+                            <ion-icon name="receipt-outline"></ion-icon>
+                            <p>{{itemLanguage.MyRequest}}</p>
+                        </button>
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+
+            <ion-col col-4>
+                <ion-card>
+                    <ion-card-content>
+                        <button block ion-button (click)="openPage('purchase-request-approval')">
+                            <ion-icon name="file-tray-stacked-outline"></ion-icon>
+                            <p>{{itemLanguage.PRApproval}}</p>
+                        </button>
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+
+            <ion-col col-4>
+                <ion-card>
+                    <ion-card-content>
+                        <button block ion-button (click)="openPage('home')">
+                            <ion-icon name="newspaper-outline"></ion-icon>
+                            <p>{{itemLanguage.PurchaseOrder}}</p>
+                        </button>
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+         
+        </ion-row>
+        <ion-row>
+            <ion-col col-4>
+                <ion-card>
+                    <ion-card-content>
+                        <button block ion-button (click)="openPage('barcode-scanner')">
+                            <ion-icon name="barcode-outline"></ion-icon>
+                            <p>{{itemLanguage.BarcodeScanner}}</p>
+                        </button>
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+
+            <ion-col col-4>
+                <ion-card>
+                    <ion-card-content>
+
+                        <button block ion-button (click)="openPage('home')">
+                            <ion-icon name="calendar-outline"></ion-icon>
+                            <p>Lorem Ipsum</p>
+                        </button>
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+
+
+            <ion-col col-4>
+                <ion-card>
+                    <ion-card-content>
+                        <button block ion-button (click)="openPage('home')">
+                            <ion-icon name="library-outline"></ion-icon>
+                            <p>Lorem Ipsum</p>
+                        </button>
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+
+
+</ion-content>

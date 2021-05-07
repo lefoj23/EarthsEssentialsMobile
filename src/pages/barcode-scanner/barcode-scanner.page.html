@@ -1,0 +1,40 @@
+
+<app-header-nav pageName="Barcode Scanner" isBackButton="true"></app-header-nav>
+
+
+
+<ion-content [fullscreen]="true">
+
+    <div class="cameraFrame" (click)="scan()">
+        <span>
+            <ion-icon name="barcode-outline"></ion-icon>
+            <br />
+            Scan Barcode
+        </span>
+
+    </div>
+
+    <ion-item>
+        <ion-label>
+            Barcode No.
+        </ion-label>
+        <p>
+           {{barcodeNumber}}
+        </p>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>
+            Description
+        </ion-label>
+        <p>
+            LOREM IPSUM
+        </p>
+    </ion-item>
+
+
+
+
+
+</ion-content>
+    

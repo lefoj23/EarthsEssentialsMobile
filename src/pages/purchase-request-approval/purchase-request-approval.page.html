@@ -1,0 +1,55 @@
+
+<app-header-nav pageName={{itemLanguage.TitlePage}} isBackButton="true" ></app-header-nav>
+
+
+
+<ion-content [fullscreen]="true">
+
+    <ion-item class="item-list pageTitle">
+        <h1 slot="start">
+            Request List
+        </h1>
+        <span slot="end">
+            Filter  <ion-icon name="filter" class="ion-float-right ion-margin-horizontal"></ion-icon>
+        </span>
+   </ion-item>
+
+
+    <ion-list>
+        <form [formGroup]="appForm">
+
+            <ion-item class="item-list item" *ngFor="let i of item;let j = index">
+                <ion-checkbox slot="start" (ionChange)="selectItem($event)" [attr.data-item]="i.ReferenceNumber"></ion-checkbox>
+                <div>
+                    <p>{{i.ReferenceNumber}} - {{i.Site}}</p>
+                    <span>{{i.Description}}</span>
+                </div>
+
+                <ion-icon name="chevron-forward" slot="end" (click)="seeDetails(i)"></ion-icon>
+            </ion-item>
+
+
+        </form>
+          
+
+
+    </ion-list>
+
+
+   
+
+
+
+</ion-content>
+    
+
+<ion-footer>
+    <ion-button expand="full" (click)="approve()">
+        {{itemLanguage.Approve}}
+    </ion-button>
+
+
+    <ion-button expand="full" (click)="approve()">
+        {{itemLanguage.Reject}}
+    </ion-button>
+</ion-footer>

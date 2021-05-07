@@ -1,0 +1,55 @@
+
+<app-header-nav pageName="Purchase Request Details" isBackButton="true" ></app-header-nav>
+
+
+
+<ion-content [fullscreen]="true">
+
+    <ion-item class="item-list pageTitle">
+        <h1 slot="start">
+            Request Details
+        </h1>  
+   </ion-item>
+
+
+    <ion-list>
+
+        <ion-item>
+            <ion-label>{{itemLanguage.ReferenceNumber}}</ion-label>
+            <p>{{prDetails.ReferenceNumber}} </p>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>{{itemLanguage.Description}}</ion-label>
+            <p>{{prDetails.Description}} </p>
+        </ion-item>
+
+
+        <ion-item>
+            <ion-label>{{itemLanguage.Site}}</ion-label>
+            <p>{{prDetails.Site}} </p>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>{{itemLanguage.Date}}</ion-label>
+            <p>{{prDetails.Date}} </p>
+        </ion-item>
+
+
+
+    </ion-list>
+
+
+   
+
+
+
+</ion-content>
+    
+
+<ion-footer>
+    <ion-button expand="full" (click)="approve()">
+        {{itemLanguage.Approve}}
+    </ion-button>
+
+</ion-footer>

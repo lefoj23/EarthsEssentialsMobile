@@ -1,0 +1,125 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+
+
+
+/* CUSTOM CSS*/
+
+ion-app {
+    ion-button {
+        --background: var(--color-primary) !important;
+        text-transform:unset !important;
+    }
+}
+
+
+.item-form {
+    --min-height: 30px !important;
+    height: 50px !important;
+    font-size: 16px !important;
+    margin: 0px 0px 0px !important;
+    --border-width: 0 0 1px 0 !important;
+    // border-bottom: solid 1px var(--color-lightgray) !important;
+    --border-color: var(--color-lightgray) !important;
+    // --highlight-color-focused: var(--color-primary) !important;
+    --highlight-color-focused: unset !important;
+    --highlight-color: unset !important;
+    /*&.item-form {
+        --highlight-color: #ff0000 !important;
+        //  --highlight-color: unset !important;
+        //  --highlight-color: var(--color-lightgray) !important;
+    }*/
+    &.item-has-focus {
+        --border-color: var(--color-primary) !important;
+    }
+
+    &.item-has-focus > .label-floating {
+        color: var(--color-primary);
+    }
+
+    .label-floating {
+        font-size: .9em !important;
+        color: var(--color-lightgray);
+    }
+
+    ion-input {
+        color: var(--color-black);
+
+        input {
+            padding: 2px !important;
+        }
+    }
+
+    ion-select {
+          color: var(--color-black);
+    }
+
+    &.item-textarea{
+        ion-textarea{
+            color: var(--color-black);
+          textarea{
+            height: 35px !important;    
+          }
+        }
+        height: 65px !important; 
+    }
+
+
+
+
+    ion-icon {
+        margin: 22px 8px 0px 0px !important;
+        border-right: 1px solid var(--color-lightgray) !important;
+        padding: 0px 10px 0px 0px !important;
+        font-size: 1.2em !important;
+    }
+}
+
+
+
+.item-list {
+    // --border: unset !important;
+    --inner-border-width: 0 0 0 0;
+
+
+    .item-native {
+        .item-inner {
+            --border: unset !important;
+            --border-color: unset !important;
+        }
+    }
+}
+
+
+
+    ion-checkbox {
+        --border-radius: 5px !important;
+        --border-width: 1px !important;
+        --background-checked: var(--color-primary) !important;
+        --border-color-checked: var(--color-primary) !important;
+    }

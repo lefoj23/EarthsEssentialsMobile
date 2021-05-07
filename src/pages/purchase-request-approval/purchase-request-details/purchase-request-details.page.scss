@@ -1,0 +1,16 @@
+ion-content {
+    ion-item {
+        &.pageTitle {
+            --inner-padding-end: 0px !important;
+
+            h1 {
+                font-size: var(--title-fontSize);
+            }
+
+            span {
+                font-size: var(--content-fontSize);
+            }
+        }
+
+    }
+}

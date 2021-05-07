@@ -1,0 +1,88 @@
+app-header-nav {
+  
+    //display: block !important;
+     height: 37.5% !important;
+}
+
+ion-content {
+    //  --background: var(--color-primary) !important;
+    //   --background: #333366 !important;
+    /*.header {
+        height: 25% !important;
+        margin: 15px !important;
+        font-size: var( --title-fontSize);
+
+        strong {
+            display: block;
+            color: var(--color-primary);
+        }
+
+        span {
+            font-size: .8em !important;
+        }
+    }*/
+    ion-slides {
+        height: 55% !important;
+        --bullet-background: var(--color-lightgray);
+        --bullet-background-active: var(--color-primary) !important;
+
+        ion-slide {
+
+
+            canvas {
+                display: block !important;
+                padding: 0px 10px 25px !important;
+            }
+        }
+    }
+
+
+    ion-grid {
+        bottom: 0;
+        //    position: absolute;
+        width: 100%;
+        //    height: 40%;
+        ion-col {
+            padding: 2px !important
+        }
+
+
+
+        ion-card {
+            margin: 2px !important;
+
+            ion-card-content {
+                padding: 0px !important;
+
+                button {
+                    &:focus {
+                        // outline-color: var(--color-primary) !important;
+                        outline: unset !important;
+                    }
+
+                    background: none;
+                    width: 100%;
+                    height: 80px;
+                    padding: 5px !important;
+
+
+
+                    ion-icon {
+                        height: 25px;
+                        color: var(--color-primary) !important;
+                        font-weight: bolder;
+                        font-size: var( --icon-sizeMedium) !important;
+                    }
+
+                    p {
+                        white-space: normal;
+                        line-height: 1;
+                        color: var(--color-black);
+                        margin: 5px 0px 0px;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+}

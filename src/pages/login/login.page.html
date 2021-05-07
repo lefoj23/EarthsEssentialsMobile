@@ -1,0 +1,66 @@
+
+<ion-content  slot="fixed">
+
+
+
+
+
+
+      
+    <ion-card>
+        <img src="../../assets/icon/eProcLogo.png" />
+
+        <ion-card-content>
+            <h1>{{itemLanguage.HelloThere}}</h1>
+
+            <div>
+
+                <ion-item class="item-form">
+                    <ion-icon name="person-outline" slot="start"></ion-icon>
+                    <ion-label position="floating">Username</ion-label>
+                    <ion-input type="text"></ion-input>
+                </ion-item>
+
+
+
+
+                <ion-item class="item-form">
+                    <ion-icon name="eye-outline" slot="start"></ion-icon>
+                    <ion-label position="floating">Password</ion-label>
+                    <ion-input type="password"></ion-input>
+                </ion-item>
+
+
+            </div>
+
+            <ion-item class="select-language" order="end">
+                <ion-icon name="language"></ion-icon>
+
+                <ion-select [(ngModel)]="selectedLanguage" (ionChange)="changeLanguage($event.detail.value)">
+                    <ion-select-option *ngFor="let lg of languageList" value="{{lg.Code}}">{{lg.Language}}</ion-select-option>
+                </ion-select>
+
+            </ion-item>
+
+
+            <ion-button expand="block" (click)="Login()">{{itemLanguage.LoginBtn}}</ion-button>
+
+
+
+
+        </ion-card-content>
+
+    </ion-card>
+       
+
+
+
+           
+       
+
+ 
+
+
+
+</ion-content>
+    

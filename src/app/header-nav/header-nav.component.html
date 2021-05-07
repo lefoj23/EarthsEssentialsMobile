@@ -1,0 +1,36 @@
+
+
+<ion-header [translucent]="true" id="homeHeader" *ngIf="homeHeader">
+    <ion-toolbar>
+        <ion-title>
+            <div class="header-nav-container">
+                <ion-icon name="menu" class="ion-float-left ion-margin-horizontal" (click)="openMenu()"></ion-icon>
+            </div>
+
+            <div class="header">
+
+                <strong>{{headerText}}</strong>
+                <span>{{clock}}</span>
+
+            </div>
+        </ion-title>
+
+    </ion-toolbar>
+
+</ion-header>
+
+
+<ion-header [translucent]="true" *ngIf="!homeHeader" id="simpleHeader">
+    <ion-toolbar>
+        <ion-title>
+            <div class="header-nav-container">
+                <ion-icon name="menu" class="ion-float-left ion-margin-horizontal" (click)="openMenu()"></ion-icon>
+                <strong>{{ pageName }}</strong>
+                <ion-icon *ngIf="isBackButton" name="chevron-back" class="ion-float-right ion-margin-horizontal" (click)="backButton()"> </ion-icon>
+                <ion-icon *ngIf="isCloseButton" name="close" class="ion-float-right ion-margin-horizontal"></ion-icon>
+            </div>
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+

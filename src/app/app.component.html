@@ -1,0 +1,39 @@
+<ion-app>
+
+    <ion-menu side="start" menuId="appMenu" contentId="main" disabled>
+        <ion-header>
+            <ion-toolbar>
+                <ion-title>Lorem Ipsum</ion-title>
+            </ion-toolbar>
+        </ion-header>
+        <ion-content>
+            <ion-list>
+                <!--<!--<ion-item *ngFor="let item of menuItem" >
+
+                    <ion-button [routerLink]="item.component">{{item.name}}</ion-button>
+                </ion-item>-->
+                <!--<ion-item *ngFor="let item of menuItem" [routerLink]="item.component" routerDirection="forward">
+                    {{item.name}}
+                </ion-item>-->
+
+                <ion-item *ngFor="let item of menuItem" (click)="openPage(item.component)">
+                    {{item.name}}
+                </ion-item>
+
+                <!--<ion-button  *ngFor="let item of menuItem" [routerLink]="item.component">{{item.name}}</ion-button>-->
+
+            </ion-list>
+            <ion-item class="logoutButton" (click)="logout()">
+                <ion-icon name="exit-outline"></ion-icon>
+                <span>Logout</span>
+            </ion-item>
+        </ion-content>
+
+
+    </ion-menu>
+
+    <ion-router-outlet id="main"></ion-router-outlet>
+
+
+ 
+</ion-app>
