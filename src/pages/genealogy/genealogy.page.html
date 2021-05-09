@@ -1,0 +1,78 @@
+
+<app-header-nav pageName={{itemLanguage.TitlePage}} isBackButton="true"></app-header-nav>
+
+
+
+<ion-content [fullscreen]="true" #ionContent>
+
+    <div class="genealogyDiv" #genealogyDiv>
+
+        <p-organizationChart [value]="data1" selectionMode="single" [(selection)]="selectedNode" (onNodeSelect)="onNodeSelect($event)"
+                             styleClass="company">
+            <ng-template let-node pTemplate="person">
+                <div class="node-header p-corner-top">{{node.label}}</div>
+                <div class="node-content">
+                    <img class="node-avatar" src="{{node.data.avatar}}"/>
+                    <div>{{node.data.name}}</div>
+                </div>
+            </ng-template>
+            <ng-template let-node pTemplate="department">
+                {{node.label}}
+            </ng-template>
+        </p-organizationChart>
+    </div>
+
+
+    <ion-item class="item-list pageTitle">
+        <h1 slot="start">
+            Details
+        </h1>
+    </ion-item>
+
+
+    <ion-list>
+        <ng-container *ngIf="selectedItem != null">
+            <ion-item>
+                <ion-label></ion-label>
+                <p> {{selectedItem.label}}</p>
+            </ion-item>
+            <ion-item *ngIf="selectedItem.data != null ">
+                <ng-container *ngIf=" selectedItem.data.name != null ">
+                    <ion-label>Name</ion-label>
+                    <p>{{selectedItem.data.name}} </p>
+                </ng-container>
+                
+            </ion-item>
+        </ng-container>
+       
+
+
+        <!--<ion-item>
+        <ion-label>{{itemLanguage.ReferenceNumber}}</ion-label>
+        <p>{{prDetails.ReferenceNumber}} </p>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>{{itemLanguage.Description}}</ion-label>
+        <p>{{prDetails.Description}} </p>
+    </ion-item>
+
+
+    <ion-item>
+        <ion-label>{{itemLanguage.Site}}</ion-label>
+        <p>{{prDetails.Site}} </p>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>{{itemLanguage.Date}}</ion-label>
+        <p>{{prDetails.Date}} </p>
+    </ion-item>-->
+
+
+
+    </ion-list>
+
+
+</ion-content>
+
+

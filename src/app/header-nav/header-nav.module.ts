@@ -5,10 +5,11 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 import { HeaderNavComponent } from './header-nav.component';
-import {  RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';
+
 
 @NgModule({
-  imports: [ CommonModule, FormsModule, IonicModule,RouterModule],
+    imports: [CommonModule, FormsModule, IonicModule,RouterModule],
   declarations: [HeaderNavComponent],
   exports: [HeaderNavComponent]
 })

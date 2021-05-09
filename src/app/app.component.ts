@@ -8,6 +8,7 @@ import { MenuController } from '@ionic/angular';
 import { NavController } from '@ionic/angular';
 import {  LanguageSettingsHelper } from '../app/helper/language-settings.helper';
 import * as _ from 'lodash';
+//import { PrimeMessageHelper } from './helper/primeMessage.helper';
 
 
 @Component({
@@ -18,7 +19,7 @@ import * as _ from 'lodash';
     
 export class AppComponent {
     public menuItem: any;
- 
+
   constructor(private platform: Platform,
               private splashScreen: SplashScreen,
               private statusBar: StatusBar,
@@ -33,12 +34,17 @@ export class AppComponent {
 
 
       this.menuItem = [
-          { name: "Home", component: "/home" },
-          { name: "PR Approval", component: "/purchase-request-approval" },
-          { name: "Purchase Order", component: "/purchase-request-approval" },
+          { name: "Home", component: "/home" , icon: "home-outline" },
+          { name: "Genealogy", component: "/genealogy" , icon: "git-network-outline"},
+          { name: "Claims", component: "/claims", icon: "card-outline" },
+          { name: "Wallet", component: "/purchase-request-approval", icon: "wallet-outline" },
+          { name: "Barcode Scanner", component: "/purchase-request-approval", icon: "barcode-outline" },
       ]
-    
+
       this.initializeApp();
+
+
+
     }
 
 

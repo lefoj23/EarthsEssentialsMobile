@@ -8,7 +8,7 @@
 
       
     <ion-card>
-        <img src="../../assets/icon/eProcLogo.png" />
+        <img src="../../assets/icon/EarthsEssential-WhiteLogo.png" />
 
         <ion-card-content>
             <h1>{{itemLanguage.HelloThere}}</h1>
@@ -33,14 +33,14 @@
 
             </div>
 
-            <ion-item class="select-language" order="end">
+            <!--<ion-item class="select-language" order="end">
                 <ion-icon name="language"></ion-icon>
 
                 <ion-select [(ngModel)]="selectedLanguage" (ionChange)="changeLanguage($event.detail.value)">
                     <ion-select-option *ngFor="let lg of languageList" value="{{lg.Code}}">{{lg.Language}}</ion-select-option>
                 </ion-select>
 
-            </ion-item>
+            </ion-item>-->
 
 
             <ion-button expand="block" (click)="Login()">{{itemLanguage.LoginBtn}}</ion-button>

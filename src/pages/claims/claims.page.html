@@ -1,0 +1,54 @@
+
+<app-header-nav pageName={{itemLanguage.TitlePage}} isBackButton="true" ></app-header-nav>
+
+
+
+<ion-content [fullscreen]="true">
+
+    <ion-item class="item-list pageTitle">
+        <h1 slot="start">
+            {{itemLanguage.SubTitle}}
+        </h1>
+        <span slot="end">
+            {{itemLanguage.Filter}}  <ion-icon name="filter" class="ion-float-right ion-margin-horizontal"></ion-icon>
+        </span>
+   </ion-item>
+
+
+    <ion-list>
+        <form [formGroup]="appForm">
+         
+            <ion-item class="item-list ion-no-padding  requestList" *ngFor="let i of item;let j = index">
+                <ion-icon class="status checkmark" name="checkmark-outline" *ngIf="i.Status == 'Approved'"></ion-icon>
+                <ion-icon class="status alert" name="alert-outline" *ngIf="i.Status == 'Pending'"></ion-icon>
+                <ion-icon class="status close" name="close-outline" *ngIf="i.Status == 'Rejected'"></ion-icon>
+                <ion-icon class="status information" name="information-outline" *ngIf="i.Status != 'Approved' && i.Status != 'Pending'  && i.Status != 'Rejected' "></ion-icon>
+                <div>
+                    <p>{{i.ReferenceNumber}} - {{i.Site}}</p>
+                    <span>{{i.Status}}</span>
+                </div>
+
+                <ion-icon name="chevron-forward" slot="end" (click)="seeDetails(i)"></ion-icon>
+            </ion-item>
+
+
+        </form>
+          
+
+
+    </ion-list>
+
+
+   
+
+
+
+</ion-content>
+    
+
+<!--<ion-footer>
+    <ion-button expand="full" (click)="addRequest()">
+       {{itemLanguage.MakeRequest}}
+    </ion-button>
+        
+</ion-footer>-->

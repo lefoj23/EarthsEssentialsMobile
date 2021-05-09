@@ -42,12 +42,7 @@ export class HomePage {
     public pieChartType: ChartType = 'pie';
     public pieChartLegend = true;
     public pieChartPlugins = [pluginDataLabels];
-    public pieChartColors = [
-        {
-            backgroundColor: ['rgba(255,0,0,0.3)', 'rgba(0,255,0,0.3)', 'rgba(0,0,255,0.3)'],
-        },
-    ];
-
+    public pieChartColors;
 
 
 
@@ -73,15 +68,35 @@ export class HomePage {
         { data: [28, 48, 40, 19], label: 'Series B' }
     ];
 
-
-
+    public barChartColors;
 
     constructor(private navCtrl: NavController) {
         this.setClock();
         this.firstName = "Juan"
         this.lastName = "Dela Cruz"
         this.headerText = `${this.itemLanguage.Greetings} ${this.firstName} ${this.lastName}`;
- 
+
+
+        let primaryRGB = getComputedStyle(document.documentElement).getPropertyValue('--color-primary-rgb');
+        let secondaryRGB = getComputedStyle(document.documentElement).getPropertyValue('--color-secondary-rgb');
+        let tertiaryRGB = getComputedStyle(document.documentElement).getPropertyValue('--color-tertiary-rgb');
+        let tertiary2RGB = getComputedStyle(document.documentElement).getPropertyValue('--color-tertiary2-rgb');
+
+        this.pieChartColors = [
+            {
+                backgroundColor: [`rgba(${primaryRGB},0.7)`, `rgba(${secondaryRGB},0.7)`, `rgba(${tertiaryRGB},0.7)`]
+            },
+        ];
+
+        this.barChartColors = [
+            {
+                backgroundColor: [`rgba(${primaryRGB},0.7)`, `rgba(${secondaryRGB},0.7)`, `rgba(${tertiaryRGB},0.7)`, `rgba(${tertiary2RGB},0.7)`],
+            },
+            {
+                backgroundColor: [`rgba(${primaryRGB},0.7)`, `rgba(${secondaryRGB},0.7)`, `rgba(${tertiaryRGB},0.7)`, `rgba(${tertiary2RGB},0.7)`],
+            },
+        ];
+        
     }
 
   

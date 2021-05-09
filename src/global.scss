@@ -27,13 +27,16 @@
 
 
 
+@import "~primeng/resources/themes/arya-green/theme.css";
+@import "~primeng/resources/primeng.min.css";
+@import "~primeicons/primeicons.css";
+
 
 /* CUSTOM CSS*/
-
 ion-app {
     ion-button {
-        --background: var(--color-primary) !important;
-        text-transform:unset !important;
+        --background: var(--color-secondary) !important;
+        text-transform: unset !important;
     }
 }
 
@@ -68,7 +71,7 @@ ion-app {
     }
 
     ion-input {
-        color: var(--color-black);
+        color: var(--color-white);
 
         input {
             padding: 2px !important;
@@ -76,12 +79,12 @@ ion-app {
     }
 
     ion-select {
-          color: var(--color-black);
+          color: var(--color-white);
     }
 
     &.item-textarea{
         ion-textarea{
-            color: var(--color-black);
+            color: var(--color-white);
           textarea{
             height: 35px !important;    
           }
@@ -123,3 +126,6 @@ ion-app {
         --background-checked: var(--color-primary) !important;
         --border-color-checked: var(--color-primary) !important;
     }
+
+
+

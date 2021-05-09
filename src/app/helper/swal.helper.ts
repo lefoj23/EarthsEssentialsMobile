@@ -2,7 +2,7 @@ import Swal from 'sweetalert2'
 import { COMMON_LANGUAGE } from '../../app/languages/common.languages';
 import { AppLanguage } from '../../app/helper/language-settings.helper';
 import * as _ from 'lodash';
-import { BuiltinVar } from '@angular/compiler';
+
 
 export class SwalHelper {
 

@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="io.ionic.starter" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>eProc Mobile</name>
-    <description>A Mobile App Version of eProcurement.</description>
+    <name>Earth's Essentials Mobile</name>
+    <description>A Mobile App Version of Earth's Essentials Webapp.</description>
     <author email="jofeljimeno23@gmail.com" href="https://github.com/lefoj23">Jofel Jimeno</author>
     <content src="index.html" />
     <access origin="*" />

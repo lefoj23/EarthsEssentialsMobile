@@ -6,10 +6,19 @@ ion-menu {
 
     ion-header {
         ion-toolbar {
-            --ion-toolbar-background: linear-gradient(to bottom right, var(--color-primary), var(--color-secondary)) !important;
+            //--ion-toolbar-background: linear-gradient(to bottom right, var(--color-primary), var(--color-secondary)) !important;
+            --ion-toolbar-background: var(--color-primary) !important;
             color: white !important;
         }
     }
+
+    .menuList {
+
+        span {
+            margin: 0px 15px !important;
+        }
+    }
+
 
     .logoutButton {
         position: absolute !important;

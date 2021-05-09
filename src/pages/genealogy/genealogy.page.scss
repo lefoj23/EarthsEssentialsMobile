@@ -1,0 +1,141 @@
+ion-content {
+    /*ion-item {
+        &.pageTitle {
+            --inner-padding-end: 0px !important;
+
+            h1 {
+                font-size: var(--title-fontSize);
+            }
+
+            span {
+                font-size: var(--content-fontSize);
+            }
+        }
+
+        &.item {
+            font-size: var(--content-fontSize);
+            --ripple-color: transparent !important;
+            --background-hover: transparent !important;
+
+            ion-checkbox {
+                margin: 18px 5px !important;
+            }
+
+            div {
+                z-index: 5 !important;
+                width: 100% !important;
+                padding: 0px 10px !important;
+
+                p {
+                    font-size: 1em !important;
+                    display: block !important;
+                    margin: 0px !important;
+                }
+
+                span {
+                    display: block !important;
+                    font-size: .75em !important;
+                }
+            }
+
+            ion-icon {
+                z-index: 6 !important;
+            }
+        }
+    }*/
+    .genealogyDiv {
+        width: 90% !important;
+        height: 75vh !important;
+        overflow: scroll;
+        display: block;
+        margin: 15px auto;
+        background-color: var(--color-tertiary2) !important;
+        padding: 50px 25px !important;
+        border-radius: 20px !important;
+        font-size: var(--title-fontSize) !important;
+    }
+}
+
+
+/*:host ::ng-deep .p-organizationchart-line-top {
+    border-top: 1px solid var(--color-tertiary) ;
+    border-color: var(--color-tertiary);
+}
+:host ::ng-deep .p-organizationchart-line-down {
+    border-bottom: 1px solid var(--color-tertiary) ;
+    background: var(--color-tertiary) ;
+}
+:host ::ng-deep .p-organizationchart-line-left {
+    border-left: 1px solid var(--color-tertiary) ;
+    border-color: var(--color-tertiary) ;
+}
+
+:host ::ng-deep .p-organizationchart-line-right {
+    border-right: 1px solid var(--color-tertiary) ;
+    border-color: var(--color-tertiary) ;
+}
+:host ::ng-deep .p-organizationchart-line {
+    border: 1px solid var(--color-tertiary) ;
+    border-color: var(--color-tertiary) ;
+}*/
+
+:host ::ng-deep .p-organizationchart-node-content {
+    border-radius: 15px !important;
+    background-color: var(--color-tertiary2) !important; //var(--color-black) !important;
+}
+
+:host ::ng-deep .p-node-toggler .p-node-toggler-icon {
+
+    color: var(--color-tertiary) !important;
+}
+
+
+:host ::ng-deep .p-organizationchart {
+    .p-person {
+        padding: 5px;
+        // border: 0 none;
+    }
+
+    .node-header, .node-content {
+        padding: .5em .7rem;
+    }
+
+    .node-header {
+        //background-color: #495ebb;
+        //color: #ffffff;
+        background-color: var(--color-primary) !important;
+        color: var(--color-black);
+        border-top-left-radius: 15px !important;
+        border-top-right-radius: 15px !important;
+    }
+
+    .node-content {
+        text-align: center;
+        //border: 1px solid #495ebb;
+        background-color: var(--color-black) !important;
+        border: 1px solid var(--color-primary) !important;
+        border-bottom-left-radius: 15px !important;
+        border-bottom-right-radius: 15px !important;
+    }
+
+    .node-content img {
+        border-radius: 50%;
+        height: 75px !important;
+        width: 75px !important;
+    }
+
+    .department-cfo {
+        background-color: var(--color-secondary) !important;
+        color: var(--color-black);
+    }
+
+    .department-coo {
+        background-color: var(--color-tertiary) !important;
+        color: var(--color-black);
+    }
+
+    .department-cto {
+        background-color: var(--color-warning) !important;
+        color: var(--color-black);
+    }
+}

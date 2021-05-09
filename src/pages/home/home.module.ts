@@ -7,13 +7,15 @@ import { HomePage } from './home.page';
 import { HeaderNavComponentModule } from '../../app/header-nav/header-nav.module';
 import { ChartsModule } from 'ng2-charts';
 import { HomePageRoutingModule } from './home-routing.module';
+import { CardModule } from 'primeng/card';
 
 @NgModule({
   imports: [
     IonicModule,
     ChartsModule,
     CommonModule,
-    FormsModule,
+        FormsModule,
+        CardModule,
     HeaderNavComponentModule,
     HomePageRoutingModule
   ],

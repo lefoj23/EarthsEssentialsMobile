@@ -1,9 +1,9 @@
 
 ion-content {
     //--background: var(--color-primary) !important;
-    //--background: linear-gradient(to bottom right, var(--color-primary), var(--color-secondary)), url('../../assets/bg.jpg') center center/cover no-repeat !important;
+    //--background: linear-gradient(to bottom right, var(--color-primary), var(--color-secondary)), url('../../assets/login-background.jpg') center center/cover no-repeat !important;
     --background: linear-gradient(to bottom right, rgba(var(--color-primary-rgb),.75), rgba(var(--color-secondary-rgb),.50)),url('../../assets/bg.jpg') center center/cover no-repeat !important;
-
+    //--background: url('../../assets/login-background.jpg') center center/cover no-repeat !important;
 
     ion-card {
         position: absolute;
@@ -14,7 +14,7 @@ ion-content {
         margin: 0 auto;
 
         img {
-            height: 50px !important;
+            height: 25vh !important;
             display: block !important;
             margin: 12px auto !important;
             padding: 5px !important;

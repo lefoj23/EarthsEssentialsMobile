@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { Tab5Page } from '../pages/tab5/tab5.page';
 import { LoginPage } from '../pages/login/login.page';
 import { HomePage } from '../pages/home/home.page';
 import { BarcodeScannerPage } from '../pages/barcode-scanner/barcode-scanner.page';
@@ -26,6 +25,10 @@ const routes: Routes = [
             loadChildren: () => import('../pages/home/home.module').then(m => m.HomePageModule)
         },
         {
+            path: 'genealogy',
+            loadChildren: () => import('../pages/genealogy/genealogy.module').then(m => m.GenealogyPageModule),
+        },
+        {
             path: 'purchase-request-approval',
             loadChildren: () => import('../pages/purchase-request-approval/purchase-request-approval.module').then(m => m.PurchaseRequestApprovalPageModule),
         },
@@ -34,15 +37,15 @@ const routes: Routes = [
             loadChildren: () => import('../pages/my-request/my-request.module').then(m => m.MyRequestPageModule),
         },
         {
+            path: 'claims',
+            loadChildren: () => import('../pages/claims/claims.module').then(m => m.ClaimsPageModule),
+        },
+        {
             path: 'barcode-scanner',
             component: BarcodeScannerPage,
             loadChildren: () => import('../pages/barcode-scanner/barcode-scanner.module').then(m => m.BarcodeScannerPageModule)
         },
-        {
-            path: 'tab5',
-            component: Tab5Page,
-            loadChildren: () => import('../pages/tab5/tab5.module').then(m => m.Tab5PageModule)
-        },
+   
  
 ];
 @NgModule({

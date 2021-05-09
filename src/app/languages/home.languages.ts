@@ -4,7 +4,10 @@ export const HOME_LANGUAGE: any = [
         Code: "EN",
         Items: {
             Greetings : "Greetings!",
-            MyRequest : "My Request",
+            Genealogy: "Genealogy",
+            MyRequest: "My Request",
+            Claims: "Claims",
+            Wallet: "Wallet",
             PRApproval: "PR Approval",
             PurchaseOrder: "Purchase Order",
             BarcodeScanner: "Barcode Scanner"
@@ -15,7 +18,10 @@ export const HOME_LANGUAGE: any = [
         Code: "TL",
         Items: {
             Greetings: "Mabuhay!",
-            MyRequest : "Mga Rekwest",
+            Genealogy: "Genealogy",
+            MyRequest: "Mga Rekwest",
+            Claims: "Kleyms",
+            Wallet: "Pitaka",
             PRApproval: "Pag Aprub ng mga PR",
             PurchaseOrder: "Order ng Pagbili",
             BarcodeScanner: "Barcode Iskaner"

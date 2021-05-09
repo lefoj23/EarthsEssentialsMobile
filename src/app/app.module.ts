@@ -14,20 +14,30 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { StoreModule } from '@ngrx/store';
 import { TestReducer } from './reducers/test.reducer';
 import { MyRequestReducer } from './reducers/my-request.reducer';
+import { ClaimsReducer } from './reducers/claims.reducer';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastModule } from 'primeng/toast';
+import { PrimeToastHelper } from './helper/primeToast.helper';
+
+import { MessageService } from 'primeng/api';
+
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
     imports: [
         BrowserModule,
+        BrowserAnimationsModule,
         IonicModule.forRoot(),
         AppRoutingModule,
         ReactiveFormsModule,
         FormsModule,
+        ToastModule,
         StoreModule.forRoot({
           test: TestReducer,
-          myRequest: MyRequestReducer,
+            myRequest: MyRequestReducer,
+            claims: ClaimsReducer
         }),
         StoreDevtoolsModule.instrument({
           maxAge: 10 // number of states to retain
@@ -38,6 +48,8 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
     StatusBar,
     SplashScreen,
     LanguageSettingsHelper,
+    PrimeToastHelper,
+    MessageService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

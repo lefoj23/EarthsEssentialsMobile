@@ -1,6 +1,15 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\pages",
+    "\\src\\pages\\barcode-scanner",
+    "\\src\\pages\\genealogy",
+    "\\src\\pages\\home",
+    "\\src\\pages\\login",
+    "\\src\\theme"
   ],
+  "SelectedNode": "\\src\\index.html",
   "PreviewInSolutionExplorer": false
 }

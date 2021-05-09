@@ -6,6 +6,57 @@
 
 
     <ion-slides [pager]="true">
+        <ion-slide>
+
+            <!--<p-card header="Wallet"  [style]="{width: '70vw'}" styleClass="p-card-shadow">
+            <ng-template pTemplate="header">
+                <img alt="Card" src="assets/showcase/images/usercard.png">
+            </ng-template>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
+                quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!
+            </p>
+
+        </p-card>-->
+
+            <p-card styleClass="p-card-shadow">
+                <ng-template pTemplate="header">
+
+                    <strong class="color-primary">My Wallet</strong>
+                </ng-template>
+
+                <p>
+                    <i class="pi pi-wallet card-icons color-primary"></i>
+                    <span>10,000 PHP</span>
+                </p>
+
+            </p-card>
+
+        </ion-slide>
+
+        <ion-slide>
+
+          
+            <p-card styleClass="p-card-shadow">
+                <ng-template pTemplate="header">
+
+                    <strong class="color-secondary">Referral Bonus</strong>
+                </ng-template>
+
+                <p>
+                    <i class="pi pi-users card-icons color-secondary"></i>
+                    <span>5,000 PHP</span>
+                </p>
+
+            </p-card>
+
+        </ion-slide>
+
+
+
+
+
+
 
         <ion-slide>
 
@@ -15,6 +66,7 @@
                     [options]="barChartOptions"
                     [plugins]="barChartPlugins"
                     [legend]="barChartLegend"
+                    [colors]="barChartColors"
                     [chartType]="barChartType"></canvas>
         </ion-slide>
 
@@ -39,9 +91,20 @@
             <ion-col col-4>
                 <ion-card>
                     <ion-card-content>
-                        <button block ion-button (click)="openPage('my-request')">
-                            <ion-icon name="receipt-outline"></ion-icon>
-                            <p>{{itemLanguage.MyRequest}}</p>
+                        <button block ion-button (click)="openPage('genealogy')">
+                            <ion-icon name="git-network-outline"></ion-icon>
+                            <p>{{itemLanguage.Genealogy}}</p>
+                        </button>
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+
+            <ion-col col-4>
+                <ion-card>
+                    <ion-card-content>
+                        <button block ion-button (click)="openPage('claims')">
+                            <ion-icon name="card-outline"></ion-icon>
+                            <p>{{itemLanguage.Claims}}</p>
                         </button>
                     </ion-card-content>
                 </ion-card>
@@ -51,19 +114,8 @@
                 <ion-card>
                     <ion-card-content>
                         <button block ion-button (click)="openPage('purchase-request-approval')">
-                            <ion-icon name="file-tray-stacked-outline"></ion-icon>
-                            <p>{{itemLanguage.PRApproval}}</p>
-                        </button>
-                    </ion-card-content>
-                </ion-card>
-            </ion-col>
-
-            <ion-col col-4>
-                <ion-card>
-                    <ion-card-content>
-                        <button block ion-button (click)="openPage('home')">
-                            <ion-icon name="newspaper-outline"></ion-icon>
-                            <p>{{itemLanguage.PurchaseOrder}}</p>
+                            <ion-icon name="wallet-outline"></ion-icon>
+                            <p>{{itemLanguage.Wallet}}</p>
                         </button>
                     </ion-card-content>
                 </ion-card>
