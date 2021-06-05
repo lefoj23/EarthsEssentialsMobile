@@ -1,50 +1,48 @@
 
 <ion-content  slot="fixed">
-
-
-
+    <img src="../../assets/icon/EarthsEssentials-Text-White.png" />
 
 
 
       
     <ion-card>
-        <img src="../../assets/icon/EarthsEssential-WhiteLogo.png" />
-
+        <h1>Log In</h1>
+        <h2>Don't have an account yet? <a>Register here</a></h2>
         <ion-card-content>
-            <h1>{{itemLanguage.HelloThere}}</h1>
-
+            <form >
             <div>
-
-                <ion-item class="item-form">
-                    <ion-icon name="person-outline" slot="start"></ion-icon>
-                    <ion-label position="floating">Username</ion-label>
-                    <ion-input type="text"></ion-input>
-                </ion-item>
-
-
-
-
-                <ion-item class="item-form">
-                    <ion-icon name="eye-outline" slot="start"></ion-icon>
-                    <ion-label position="floating">Password</ion-label>
-                    <ion-input type="password"></ion-input>
-                </ion-item>
+                
+                    <ion-item class="item-form">
+   
+                        <ion-label position="floating">Username</ion-label>
+                        <ion-input type="text"></ion-input>
+                    </ion-item>
+    
+    
+    
+    
+                    <ion-item class="item-form">
+                       
+                        <ion-label position="floating">Password</ion-label>
+                        <ion-input type="password"></ion-input>
+                    </ion-item>
+            
+              
 
 
             </div>
 
-            <!--<ion-item class="select-language" order="end">
-                <ion-icon name="language"></ion-icon>
+           
 
-                <ion-select [(ngModel)]="selectedLanguage" (ionChange)="changeLanguage($event.detail.value)">
-                    <ion-select-option *ngFor="let lg of languageList" value="{{lg.Code}}">{{lg.Language}}</ion-select-option>
-                </ion-select>
+            <!-- <ion-button shape="round" size="large" (click)="Login()">{{itemLanguage.LoginBtn}}</ion-button> -->
+            <ion-button shape="round" size="large" (click)="Login()">Login</ion-button>
+            
+            <span>Forgot your password? <a>Click here</a></span>
 
-            </ion-item>-->
+            
+        </form>
 
-
-            <ion-button expand="block" (click)="Login()">{{itemLanguage.LoginBtn}}</ion-button>
-
+        <img class="fingerprintIcon" (click)="fingerprintLogin()" src="../../assets/icon/fingerprint-white.png" />
 
 
 
@@ -53,6 +51,14 @@
     </ion-card>
        
 
+ <!--<ion-item class="select-language" order="end">
+                <ion-icon name="language"></ion-icon>
+
+                <ion-select [(ngModel)]="selectedLanguage" (ionChange)="changeLanguage($event.detail.value)">
+                    <ion-select-option *ngFor="let lg of languageList" value="{{lg.Code}}">{{lg.Language}}</ion-select-option>
+                </ion-select>
+
+            </ion-item>-->
 
 
            

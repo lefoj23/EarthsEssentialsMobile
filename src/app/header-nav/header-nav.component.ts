@@ -1,7 +1,8 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { MenuController } from '@ionic/angular';
+import { Component, OnInit, Input ,ViewChild} from '@angular/core';
+
 import { Router } from '@angular/router';
-import { NavController } from '@ionic/angular';
+import { NavController,MenuController } from '@ionic/angular';
+
 
 
 @Component({
@@ -10,6 +11,8 @@ import { NavController } from '@ionic/angular';
   styleUrls: ['./header-nav.component.scss'],
 })
 export class HeaderNavComponent implements OnInit {
+  //@ViewChild('headerNav') headerNav;
+ //@Input('headerNav') headerNav: any;
 
   @Input() headerText: string;
   @Input() clock: string;
@@ -25,11 +28,18 @@ export class HeaderNavComponent implements OnInit {
         //    { name: "PR Approval", component:"/purchase-request-approval" },
         //    { name: "Purchase Order", component: "/purchase-request-approval" },
         //]
-
-
+       // console.log(this.headerNav)
+    
     }
 
-  ngOnInit() {}
+  ngOnInit() {
+ 
+
+  }
+  // ngAfterViewInit() {
+  //   HeaderNav = this.headerNav;
+  //   console.log(HeaderNav)
+  // }
 
 
 

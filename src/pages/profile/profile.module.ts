@@ -3,10 +3,10 @@ import { IonicModule } from '@ionic/angular';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { LoginPage } from './login.page';
+import { ProfilePage } from './profile.page';
 import { HeaderNavComponentModule } from '../../app/header-nav/header-nav.module';
 
-import { LoginPageRoutingModule } from './login-routing.module';
+import { ProfilePageRoutingModule } from './profile-routing.module';
 import { AndroidFingerprintAuth } from '@ionic-native/android-fingerprint-auth/ngx';
 @NgModule({
   imports: [
@@ -14,9 +14,9 @@ import { AndroidFingerprintAuth } from '@ionic-native/android-fingerprint-auth/n
     CommonModule,
     FormsModule,
     HeaderNavComponentModule,
-    LoginPageRoutingModule
+    ProfilePageRoutingModule
   ],
   providers:[AndroidFingerprintAuth],
-  declarations: [LoginPage],
+  declarations: [ProfilePage],
 })
-export class LoginPageModule {}
+export class ProfilePageModule {}

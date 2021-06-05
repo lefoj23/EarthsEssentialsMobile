@@ -1,0 +1,83 @@
+
+ <ion-header [translucent]="true" id="homeHeader" #header>
+    <ion-toolbar>
+        <ion-title>
+            <div class="header-nav-container">
+                <img class="appLogo ion-float-left ion-margin-horizontal" src="../../assets/icon/EarthsEssentials-Text-White.png" />
+                <ion-icon name="menu" class="ion-float-right ion-margin-horizontal" (click)="openMenu()"></ion-icon>
+            </div>
+        </ion-title>
+    
+    </ion-toolbar>
+
+</ion-header> 
+
+
+
+<ion-content  slot="fixed">
+
+      
+    <ion-card>
+        <div class="userBadgeDiv" >
+            <img class="userBadge" src="../../assets/avatar/avatar1.png" />
+            <h1>TEST ADMIN</h1> 
+         
+            <h2>testadmin@email.com</h2> 
+            <h3>GOLD PACKAGE</h3> 
+
+            <!-- <ion-button class="termsBtn" shape="round" >Open Terms & Conditions</ion-button> -->
+
+        </div>
+   
+        <!-- <h1>Log In</h1>
+        <h2>Don't have an account yet? <a>Register here</a></h2> -->
+        <ion-card-content>
+            <form >
+            <div>
+                
+                
+                    <ion-item class="item-form">
+                        <ion-label position="floating">First Name</ion-label>
+                        <ion-input type="text" value="TEST FIRSTNAME"></ion-input>
+                    </ion-item>
+    
+                    <ion-item class="item-form">
+                        <ion-label position="floating">Middle Name</ion-label>
+                        <ion-input type="text" value="TEST MIDDLENAME"></ion-input>
+                    </ion-item>
+                    <ion-item class="item-form">
+                        <ion-label position="floating">Last Name</ion-label>
+                        <ion-input type="text" value="TEST LASTNAME"></ion-input>
+                    </ion-item>
+    
+                    <ion-item class="item-form">
+                        <ion-label position="floating">Mobile Number</ion-label>
+                        <ion-input type="text" value="09*********"></ion-input>
+                    </ion-item>
+
+                    <ion-item class="item-form">
+                        <ion-label position="stacked">Payout Details</ion-label>
+                        <ion-textarea placeholder="Please type in here."></ion-textarea>
+                      </ion-item>
+
+              
+
+
+            </div>
+
+            <ion-button shape="round" size="large" >Save Changes</ion-button>
+            
+          
+        </form>
+
+       
+
+        </ion-card-content>
+
+    </ion-card>
+       
+
+
+
+</ion-content>
+    

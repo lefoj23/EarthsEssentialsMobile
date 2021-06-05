@@ -3,6 +3,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { LoginPage } from '../pages/login/login.page';
 import { HomePage } from '../pages/home/home.page';
 import { BarcodeScannerPage } from '../pages/barcode-scanner/barcode-scanner.page';
+import { ProfilePage } from '../pages/profile/profile.page';
 
 const routes: Routes = [
       //{
@@ -23,6 +24,11 @@ const routes: Routes = [
             path: 'home',
             component: HomePage,
             loadChildren: () => import('../pages/home/home.module').then(m => m.HomePageModule)
+        },
+        {
+            path: 'profile',
+            component: ProfilePage,
+            loadChildren: () => import('../pages/profile/profile.module').then(m => m.ProfilePageModule)
         },
         {
             path: 'genealogy',

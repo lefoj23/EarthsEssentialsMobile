@@ -38,7 +38,7 @@ export class AppComponent {
           { name: "Genealogy", component: "/genealogy" , icon: "git-network-outline"},
           { name: "Claims", component: "/claims", icon: "card-outline" },
           { name: "Wallet", component: "/purchase-request-approval", icon: "wallet-outline" },
-          { name: "Barcode Scanner", component: "/purchase-request-approval", icon: "barcode-outline" },
+          { name: "Barcode Scanner", component: "/barcode-scanner", icon: "barcode-outline" },
       ]
 
       this.initializeApp();
@@ -47,7 +47,10 @@ export class AppComponent {
 
     }
 
+    closeMenu(){
+      this.menu.close('appMenu');
 
+    }
 
     logout() {
         this.menu.enable(false)

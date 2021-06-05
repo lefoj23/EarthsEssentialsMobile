@@ -3,11 +3,24 @@
     <ion-menu side="start" menuId="appMenu" contentId="main" disabled>
         <ion-header>
             <ion-toolbar>
-                <ion-title>Lorem Ipsum</ion-title>
+                <!-- <ion-title>Lorem Ipsum</ion-title> -->
+                <ion-icon name="close" class="ion-float-right ion-margin-horizontal" (click)="closeMenu()"></ion-icon>
+         
             </ion-toolbar>
         </ion-header>
         <ion-content>
+
             <ion-list>
+                
+            <ion-item class="menuList userProfile">
+                <img class="userBadge" src="../../assets/avatar/avatar1.png" />
+
+                <span>TEST NAME</span>
+                <ion-icon name="chevron-forward" slot="end" class="ion-float-right ion-margin-horizontal" (click)="openPage('/profile')"> </ion-icon>
+
+            </ion-item>
+
+
                 <!--<!--<ion-item *ngFor="let item of menuItem" >
 
                     <ion-button [routerLink]="item.component">{{item.name}}</ion-button>
@@ -17,7 +30,7 @@
                 </ion-item>-->
 
                 <ion-item class="menuList" *ngFor="let item of menuItem" (click)="openPage(item.component)">
-                    <ion-icon [name]=item.icon></ion-icon>
+                    <!-- <ion-icon [name]=item.icon></ion-icon> -->
                     <span>{{item.name}}</span>
                 </ion-item>
 
@@ -25,7 +38,7 @@
 
             </ion-list>
             <ion-item class="logoutButton" (click)="logout()">
-                <ion-icon name="exit-outline"></ion-icon>
+                <!-- <ion-icon name="exit-outline"></ion-icon> -->
                 <span>Logout</span>
             </ion-item>
         </ion-content>

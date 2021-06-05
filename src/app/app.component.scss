@@ -3,29 +3,87 @@
 
 ion-menu {
     z-index: 999 !important;
+    --min-width:100% !important;
+    --background: rgba(var(--color-black-rgb),.65) !important;  
+    //--background:rgba(var(--color-black-rgb),.75) !important;
 
     ion-header {
+        --background:unset !important;
+        background:unset !important;
         ion-toolbar {
+            --background:unset !important;
+            background:unset !important;
             //--ion-toolbar-background: linear-gradient(to bottom right, var(--color-primary), var(--color-secondary)) !important;
-            --ion-toolbar-background: var(--color-primary) !important;
-            color: white !important;
+            // --ion-toolbar-background: var(--color-primary) !important;
+            color: var(color-white) !important;
+            ion-icon {
+                font-size: 30px !important;
+            }
         }
     }
-
-    .menuList {
-
-        span {
-            margin: 0px 15px !important;
-        }
+    ion-content{
+        --background:unset !important;
+        background:unset !important;
     }
 
+    ion-list{
+        --background:transparent !important;
+        background:unset !important;
+       
+        ion-item{
+
+            padding:10px 0px !important;
+            --border:0px !important;
+            --inner-border-width: 0px !important;
+            font-size:1.2em !important;
+            //font-family:var(--font-family-thin)!important;
+            font-family:var(--font-family-semibold)!important;
+
+            letter-spacing: 1.25px !important;
+            &.menuList {
+                --background:unset !important;
+                background:unset !important;
+                border:0px !important;
+                span {
+                    margin: 0px 15px !important;
+                }
+            }
+        
+            &.userProfile{
+                font-size:1.4em !important;
+                font-family:var(--font-family-light)!important;
+          
+                .userBadge{
+                    height: 60px !important;
+                    width: 60px !important;
+                    border-radius: 50%;
+                }
+
+            }
+       
+       
+        }
+        
+
+    }
+ 
 
     .logoutButton {
+        //font-family:var(--font-family-semibold)!important;
+       
         position: absolute !important;
         bottom: 0 !important;
         width: 100% !important;
+        padding:10px 0px !important;
         border: unset !important;
+        --background:unset !important;
+        --border:0px !important;
+        --inner-border-width: 0px !important;
+        font-size:1.2em !important;
+        //font-family:var(--font-family-thin)!important;
+        font-family:var(--font-family-semibold)!important;
 
+        letter-spacing: 1.25px !important;
         span {
             margin: 0px 15px !important;
         }

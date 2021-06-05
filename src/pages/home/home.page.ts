@@ -1,21 +1,37 @@
-import { Component } from '@angular/core';
+import { Component, OnInit,Renderer2, Input,ViewChild} from '@angular/core';  
 import { ChartOptions, ChartType, ChartDataSets } from 'chart.js';
 import * as pluginDataLabels from 'chartjs-plugin-datalabels';
 import { Label } from 'ng2-charts';
-import { NavController } from '@ionic/angular';
+import { NavController,MenuController } from '@ionic/angular';
+
 import { AppLanguage } from '../../app/helper/language-settings.helper';
 import { HOME_LANGUAGE } from '../../app/languages/home.languages';
 import { COMMON_LANGUAGE } from '../../app/languages/common.languages';
 import * as _ from 'lodash';
 import * as moment from 'moment';
 
+//import { HeaderNav } from '../../app/header-nav/header-nav.component';
+
+//import { trigger, state, transition, style, animate } from '@angular/animations';  
+
+
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss']
+  styleUrls: ['home.page.scss'],
+//   animations:[ 
+//     trigger('fade',
+//         [ 
+//         state('void', style({ opacity : 0})),
+//         transition(':enter',[ animate(300)]),
+//         transition(':leave',[ animate(500)]),
+//         ]
+//     )]
 })
-export class HomePage {
- 
+export class HomePage implements OnInit{
+   //@ViewChild('headerNav') headerNav;
+    @Input('header') header: any;
+    public lastX:any;
     public pageLanguage = _.find(HOME_LANGUAGE, { 'Code': AppLanguage.Code });
     public itemLanguage = this.pageLanguage.Items;
     public headerText: any;
@@ -70,7 +86,10 @@ export class HomePage {
 
     public barChartColors;
 
-    constructor(private navCtrl: NavController) {
+    constructor(private navCtrl: NavController,
+        private menu: MenuController,
+        private renderer: Renderer2,
+        ) {
         this.setClock();
         this.firstName = "Juan"
         this.lastName = "Dela Cruz"
@@ -99,6 +118,87 @@ export class HomePage {
         
     }
 
+    ngOnInit() {  }
+    // ngAfterViewInit() {
+     
+      
+    //   }
+    
+    openMenu() {
+        this.menu.close();
+        this.menu.enable(true, 'appMenu');
+        this.menu.open('appMenu');
+
+    }
+
+    //@HostListener('window:scroll', ['$event'])
+    onWindowScroll(ev) {
+        
+    //console.log(this.header)
+    //      console.log(ev)
+
+    //let element = document.getElementById('headerNav');
+    
+    if(ev.detail.currentY > 175){
+   
+       // if(ev.detail.scrollTop > Math.max(0,this.lastX)){
+            //console.log("HIDE HeADER")
+            //this.renderer.setStyle(this.header,'margin-top',`-${this.header.clientHeight}px`)
+            // this.renderer.removeClass(this.header,"show");
+            
+            // this.renderer.addClass(this.header,"hidden");
+            // this.renderer.setStyle(this.header,'transition','margin-top 600ms')
+           
+            this.renderer.setStyle(this.header,'height',`0px`)
+      
+            this.renderer.setStyle(this.header,'transition','height 600ms')
+
+      
+        }else{
+            // this.renderer.setStyle(this.header,'margin-top','0px')
+            // this.renderer.setStyle(this.header,'transition','margin-top 600ms')
+          
+            // this.renderer.addClass(this.header,"show");
+            // this.renderer.removeClass(this.header,"hidden");
+
+            
+            // console.log("SHOW HeADER")
+            this.renderer.setStyle(this.header,'height','300px')
+
+          
+            this.renderer.setStyle(this.header,'transition','height 600ms')
+
+        }
+
+     // this.lastX  = ev.detail.scrollTop ;
+      
+
+
+      // if (window.pageYOffset > 550) {
+    // if(e.detail.currentY > 200){
+    //      let element = document.getElementById('homeHeader');
+    //      element.classList.add('sticky');
+    //      console.log("gg")
+    //    } else {
+    //     let element = document.getElementById('homeHeader');
+    //       element.classList.remove('sticky'); 
+    //       console.log("gyyg")
+    //    }
+
+
+    }
+
+    scrollStart(header){
+      
+     
+     // console.log(this.headerNav)
+   
+      
+      console.log(header)
+       this.header = header.el.children[1];
+
+    }
+  
   
     openPage(str) {
         

@@ -1,35 +1,72 @@
 
+<!-- <ion-header  #headerNav [translucent]="true" id="homeHeader" *ngIf="homeHeader" >
 
-<ion-header [translucent]="true" id="homeHeader" *ngIf="homeHeader">
     <ion-toolbar>
         <ion-title>
             <div class="header-nav-container">
-                <ion-icon name="menu" class="ion-float-left ion-margin-horizontal" (click)="openMenu()"></ion-icon>
-            </div>
-
-            <div class="header">
-
-                <strong>{{headerText}}</strong>
-                <span>{{clock}}</span>
-
-
-
+                <img class="appLogo ion-float-left ion-margin-horizontal" src="../../assets/icon/EarthsEssentials-Text-White.png" />
+                <ion-icon name="menu" class="ion-float-right ion-margin-horizontal" (click)="openMenu()"></ion-icon>
             </div>
         </ion-title>
-
+    
     </ion-toolbar>
+</ion-header> -->
 
-</ion-header>
+<!-- <ion-header [translucent]="true" id="homeHeader" *ngIf="homeHeader">
+    <ion-toolbar>
+        <ion-title>
+            <div class="header-nav-container">
+                <img class="appLogo ion-float-left ion-margin-horizontal" src="../../assets/icon/EarthsEssentials-Text-White.png" />
+                <ion-icon name="menu" class="ion-float-right ion-margin-horizontal" (click)="openMenu()"></ion-icon>
+            </div>
+        </ion-title>
+    
+    </ion-toolbar>
+    <div class="header">
+      
+         <ion-card>
+             <div class="userBadgeDiv">
+                <img class="userBadge" src="../../assets/icon/badge/gold-icon.png" />
+                <span class="userBadgeTag">Team Leader &#9733;</span>
+             </div>
+        
+            <ion-card-header>
+                <ion-card-title>Welcome back, <span>TESTNAME</span></ion-card-title>
+             
+            </ion-card-header>
+            <ion-card-content>
+             <ion-row>
+                 <ion-col class="ion-text-left">
+                     Next Network Level
+                 </ion-col>
+                 <ion-col class="ion-text-right">
+                    65%
+                </ion-col>
+             </ion-row>
+             <ion-progress-bar color="primary" value="0.65"></ion-progress-bar>
+             <ion-row class="buttonRow">
+                <ion-col>
+                    Upgrade
+                </ion-col>
+                <ion-col>
+                   Invite
+               </ion-col>
+            </ion-row>
+            </ion-card-content>
+          </ion-card>
+    </div>
+</ion-header> -->
 
 
 <ion-header [translucent]="true" *ngIf="!homeHeader" id="simpleHeader">
     <ion-toolbar>
         <ion-title>
             <div class="header-nav-container">
-                <ion-icon name="menu" class="ion-float-left ion-margin-horizontal" (click)="openMenu()"></ion-icon>
+                <ion-icon *ngIf="isBackButton" name="chevron-back" class="ion-float-left ion-margin-horizontal" (click)="backButton()"> </ion-icon>
+                <ion-icon *ngIf="isCloseButton" name="close" class="ion-float-left ion-margin-horizontal"></ion-icon>
+         
                 <strong>{{ pageName }}</strong>
-                <ion-icon *ngIf="isBackButton" name="chevron-back" class="ion-float-right ion-margin-horizontal" (click)="backButton()"> </ion-icon>
-                <ion-icon *ngIf="isCloseButton" name="close" class="ion-float-right ion-margin-horizontal"></ion-icon>
+                <ion-icon name="menu" class="ion-float-right ion-margin-horizontal" (click)="openMenu()"></ion-icon>
             </div>
         </ion-title>
     </ion-toolbar>

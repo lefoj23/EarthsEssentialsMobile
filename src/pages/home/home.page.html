@@ -1,10 +1,66 @@
 
-<app-header-nav homeHeader="true" headerText="{{headerText}}" clock="{{clock}}"></app-header-nav>
+ <ion-header [translucent]="true" id="homeHeader" #header>
+    <ion-toolbar>
+        <ion-title>
+            <div class="header-nav-container">
+                <img class="appLogo ion-float-left ion-margin-horizontal" src="../../assets/icon/EarthsEssentials-Text-White.png" />
+                <ion-icon name="menu" class="ion-float-right ion-margin-horizontal" (click)="openMenu()"></ion-icon>
+            </div>
+        </ion-title>
+    
+    </ion-toolbar>
+    <div class="header">
+      
+         <ion-card>
+             <div class="userBadgeDiv">
+                <img class="userBadge" src="../../assets/icon/badge/gold-icon.png" />
+                <span class="userBadgeTag">Team Leader &#9733;</span>
+             </div>
+        
+            <ion-card-header>
+                <ion-card-title>Welcome back, <span>TESTNAME</span></ion-card-title>
+             
+            </ion-card-header>
+            <ion-card-content>
+             <ion-row>
+                 <ion-col class="ion-text-left">
+                     Next Network Level
+                 </ion-col>
+                 <ion-col class="ion-text-right">
+                    65%
+                </ion-col>
+             </ion-row>
+             <ion-progress-bar color="primary" value="0.65"></ion-progress-bar>
+             <ion-row class="buttonRow">
+                <ion-col>
+                    Upgrade
+                </ion-col>
+                <ion-col>
+                   Invite
+               </ion-col>
+            </ion-row>
+            </ion-card-content>
+          </ion-card>
+    </div>
+</ion-header> 
 
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" [scrollEvents]="true" #scrollArea (ionScroll)="onWindowScroll($event)" (ionScrollStart)="scrollStart(header)">
 
+    <ion-item>
+        <ion-card class="ion-padding-bottom">
+            <div class="ion-padding-horizontal ion-text-center">
+                <h2>Updated terms and conditions</h2>
+                <span  class="text-color-white">Our <a class="text-color-tertiary2" href="#">Terms and conditions</a> are  updated (2021-05-29)</span>
+            </div>
 
+            <ion-button class="termsBtn" shape="round" >Open Terms & Conditions</ion-button>
+
+          
+        </ion-card>
+    
+    </ion-item>
+  
     <ion-slides [pager]="true">
         <ion-slide>
 
@@ -25,9 +81,11 @@
                     <strong class="color-primary">My Wallet</strong>
                 </ng-template>
 
+                <!-- <i class="pi pi-wallet card-icons color-primary"></i> -->
+                <img class="card-img" src="../../assets/icon/badge/silver-icon.png" />
+               
                 <p>
-                    <i class="pi pi-wallet card-icons color-primary"></i>
-                    <span>10,000 PHP</span>
+                    100,000.00<span>PHP</span>
                 </p>
 
             </p-card>
@@ -43,9 +101,9 @@
                     <strong class="color-secondary">Referral Bonus</strong>
                 </ng-template>
 
+                <i class="pi pi-users card-icons color-secondary"></i>
                 <p>
-                    <i class="pi pi-users card-icons color-secondary"></i>
-                    <span>5,000 PHP</span>
+                    5,000.00<span>PHP</span>
                 </p>
 
             </p-card>
@@ -86,6 +144,48 @@
 
 
 
+    <ion-list class="item-list ">
+      
+        <ion-item>
+            <ion-card>
+                <img src="../../assets/bg.jpg" />
+                <ion-card-header>
+                  <!-- <ion-card-subtitle>Destination</ion-card-subtitle> -->
+                  <ion-card-title>Madison, WI</ion-card-title>
+                </ion-card-header>
+                <ion-card-content>
+                  Founded in 1829 on an isthmus between Lake Monona and Lake Mendota, Madison was named the capital of the Wisconsin Territory in 1836.
+                </ion-card-content>
+              </ion-card>
+        </ion-item>
+         
+        <ion-item>
+            <ion-card>
+                <img src="../../assets/bg2.jpg" />
+                <ion-card-header>
+                  <!-- <ion-card-subtitle>Destination</ion-card-subtitle> -->
+                  <ion-card-title>Madison, WI</ion-card-title>
+                </ion-card-header>
+                <ion-card-content>
+                  Founded in 1829 on an isthmus between Lake Monona and Lake Mendota, Madison was named the capital of the Wisconsin Territory in 1836.
+                </ion-card-content>
+              </ion-card>
+        </ion-item>
+
+        <ion-item>
+            <ion-card>
+                <img src="../../assets/bg3.png" />
+                <ion-card-header>
+                  <!-- <ion-card-subtitle>Destination</ion-card-subtitle> -->
+                  <ion-card-title>Madison, WI</ion-card-title>
+                </ion-card-header>
+                <ion-card-content>
+                  Founded in 1829 on an isthmus between Lake Monona and Lake Mendota, Madison was named the capital of the Wisconsin Territory in 1836.
+                </ion-card-content>
+              </ion-card>
+        </ion-item>
+    </ion-list>
+<!-- 
     <ion-grid>
         <ion-row>
             <ion-col col-4>
@@ -158,7 +258,7 @@
                 </ion-card>
             </ion-col>
         </ion-row>
-    </ion-grid>
+    </ion-grid> -->
 
 
 

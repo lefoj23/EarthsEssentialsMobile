@@ -43,16 +43,167 @@ ion-content {
             }
         }
     }*/
-    .genealogyDiv {
+    // .genealogyDiv {
+    //     width: 90% !important;
+    //     height: 75vh !important;
+    //     overflow: scroll;
+    //     display: block;
+    //     margin: 15px auto;
+    //     background-color: var(--color-tertiary2) !important;
+    //     padding: 50px 25px !important;
+    //     border-radius: 20px !important;
+    //     font-size: var(--title-fontSize) !important;
+    // }
+
+
+       .genealogyDiv {
         width: 90% !important;
         height: 75vh !important;
         overflow: scroll;
         display: block;
         margin: 15px auto;
-        background-color: var(--color-tertiary2) !important;
-        padding: 50px 25px !important;
-        border-radius: 20px !important;
-        font-size: var(--title-fontSize) !important;
+        background-color: rgba(var(--color-tertiary3-rgb),.50 )!important;
+        padding: 15px !important;
+        border-radius:  var(--border-radius-size) !important;
+        //font-size: var(--title-fontSize) !important;
+
+        ion-grid{
+            ion-row{
+                    ion-col{
+                        height: 135px  !important;
+                        &.lg-col{
+                            height: 150px  !important;
+
+                        }
+
+                        &.md-col{
+                            height: 150px  !important;
+
+                        }
+
+                        position: relative;
+                        padding:0px !important;
+                        
+                        h2{
+                            text-align: center;
+                            position: absolute;
+                            //bottom: 15px;
+                            bottom:25px;
+                            margin:5px auto !important;
+
+                            width: 100%;
+                        }
+
+                        h3{
+                            text-align: center;
+                            position: absolute;
+                            //bottom:0px;
+                            width: 100%;
+                            font-size:.9em !important;
+                            font-family:var(--font-family-semibold)!important;
+                            margin:5px auto !important;
+                        }
+
+                        .badgeDiv{
+                            position: absolute;
+                            left:0;
+                            right:0;
+                            margin:0px auto  !important;
+                            bottom:35px!important;
+                            .badge{
+                                margin:0px auto  !important;
+                         
+                                display: block;
+                                padding:0px  !important;
+                                &.badge-large{
+                                   width:90px !important;
+                                    height:90px !important;
+                                    //bottom: 15px;
+                                    //top:0;
+                                }
+                                &.badge-small{
+                                   width:70px !important;
+                                    height:70px !important;
+                                    //bottom: 30px;
+                                    
+                                }
+                            }
+    
+                        }
+
+                        &.lg-col > .badgeDiv{
+                            height: 150px  !important;
+                            bottom:unset!important;
+
+                        }
+
+
+                     
+
+
+                        .vertical-line{
+                            width: 1px;
+                            height: 20px;
+                            border-right: .5px solid var(--color-black) !important;
+                            //border-left: .5px solid var(--color-black) !important;
+
+                            position: absolute;
+                           // top:0px;
+                            left:0;
+                            right:0;
+                            margin:0 auto  !important;
+
+                            &.line-long{
+                                height: 37.5px !important;
+                            }
+
+                            &.line-top{
+                                top:0 !important;
+                            }
+
+                            &.line-bottom{
+                                bottom:0 !important;
+                            }
+
+                        }
+                        .horizontal-line{
+                            width: 50%;
+                            height: 1px;
+                            border-top: .5px solid var(--color-black) !important;
+                            //border-bottom: .5px solid var(--color-black) !important;
+
+                            position: absolute;
+                           
+                            //left:0;
+                            
+                            margin:0 auto  !important;
+                            &.line-short{
+                                width: 12.5% !important;
+                            }
+                            &.line-top{
+                                top:0px !important;
+                            }
+                            &.line-middle{
+                            top:50% !important;
+                            }
+                            &.line-right{
+                                right:0 !important;
+                            }
+
+                            &.line-left{
+                                left:0 !important;
+                            }
+                        }
+
+                        
+
+                    }
+
+            }
+
+        }
+
+   
     }
 }
 

@@ -4,10 +4,10 @@
 
 
 <ion-content [fullscreen]="true" #ionContent>
-
+<!-- 
     <div class="genealogyDiv" #genealogyDiv>
 
-        <p-organizationChart [value]="data1" selectionMode="single" [(selection)]="selectedNode" (onNodeSelect)="onNodeSelect($event)"
+        <p-organizationChart [value]="data1" selectionMode="single" (onNodeSelect)="onNodeSelect($event)"
                              styleClass="company">
             <ng-template let-node pTemplate="person">
                 <div class="node-header p-corner-top">{{node.label}}</div>
@@ -20,8 +20,72 @@
                 {{node.label}}
             </ng-template>
         </p-organizationChart>
-    </div>
+    </div> -->
 
+
+    <div class="genealogyDiv">
+        <ion-grid>
+            <ion-row>
+                <!-- <ion-col class="large-col"> 
+                  
+                </ion-col> -->
+                <ion-col class="lg-col"> 
+                    <span class="vertical-line line-bottom"></span>
+
+                    <div class="badgeDiv">
+                    <img class="badge badge-large" src="../../assets/icon/badge/gold-icon.png" />
+                    <h2>Test Admin</h2>
+                    </div>
+                </ion-col>
+                <!-- <ion-col class="large-col"> 
+                 
+                </ion-col> -->
+            </ion-row>
+            <ion-row>
+                <ion-col> 
+                    <span class="vertical-line line-top"></span>
+                    <span class="horizontal-line line-top line-right"></span>
+                    <div class="badgeDiv">
+                    <img class="badge badge-small" src="../../assets/icon/badge/silver-icon.png" />
+                    <h3>Sample Name 1</h3>
+                    </div>
+                </ion-col>
+                <ion-col> 
+
+                    <span class="vertical-line line-top"></span>
+                    <span class="horizontal-line line-top line-left"></span>
+
+                    <div class="badgeDiv">
+                        <img class="badge badge-small" src="../../assets/icon/badge/gold-icon.png" />
+                        <h3>Sample Name 2</h3>
+                    </div>
+                
+                </ion-col>
+            </ion-row>
+
+            <ion-row>
+                <ion-col  class="md-col"> 
+                    <span class="vertical-line line-top line-long"></span>
+                    <!-- <span class="horizontal-line line-right"></span> -->
+                    <div class="badgeDiv">
+                        <span class="horizontal-line line-middle line-right line-short"></span>
+
+                        <img class="badge badge-small" src="../../assets/icon/badge/green-icon.png" />
+                        <h3>Sample Name 3</h3>
+                    </div>
+                   
+                  
+                   
+                </ion-col>
+                <ion-col> 
+
+                </ion-col>
+            </ion-row>
+
+
+        </ion-grid>
+        
+    </div>
 
     <ion-item class="item-list pageTitle">
         <h1 slot="start">
