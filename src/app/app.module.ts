@@ -19,7 +19,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastModule } from 'primeng/toast';
 import { PrimeToastHelper } from './helper/primeToast.helper';
-
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { MessageService } from 'primeng/api';
 
 
@@ -31,6 +31,7 @@ import { MessageService } from 'primeng/api';
         BrowserAnimationsModule,
         IonicModule.forRoot(),
         AppRoutingModule,
+        HttpClientModule,
         ReactiveFormsModule,
         FormsModule,
         ToastModule,

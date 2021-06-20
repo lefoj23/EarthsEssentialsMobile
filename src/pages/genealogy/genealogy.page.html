@@ -22,13 +22,77 @@
         </p-organizationChart>
     </div> -->
 
+    <ion-item>
+        <ion-button  color="dark" shape="round" fill="outline" size="small" (click)="goBack()" *ngIf="isGraphLoaded && currentBinaryUserId != userDetails.uniqueId">
+            <ion-icon name="chevron-back-outline"></ion-icon>
+            Back
+        </ion-button>
+    </ion-item>
+  
 
-    <div class="genealogyDiv">
-        <ion-grid>
+    <div class="genealogyDiv" >
+   
+        <ion-grid *ngIf="isGraphLoaded">
+            <ion-row >
+         
+                <ion-col class="lg-col"> 
+                    <span class="vertical-line line-bottom" *ngIf="binary.children.length > 0"></span>
+
+                    <div class="badgeDiv">
+                    <img class="badge badge-large" 
+                        [src]="binary.package == 1 ? '../../assets/icon/badge/silver-icon.png' :
+                        binary.package == 2 ? '../../assets/icon/badge/gold-icon.png' : 
+                        '../../assets/icon/badge/green-icon.png' "   />
+                    <h2>{{binary.username}}</h2>
+                    </div>
+                </ion-col>
+              
+            </ion-row>
+
+            <ion-row *ngIf="binary.children.length > 0">
+        
+                <ng-container  *ngFor="let ch of binary.children;let i = index">
+                    <ion-col  *ngIf="i == 0" > 
+                        <ng-container  *ngIf="ch !=  null">
+                            <span class="vertical-line line-top"></span>
+                            <span class="horizontal-line line-top line-right"></span>
+                            <div class="badgeDiv" (click)="getBinary(ch.id)">
+                            <img class="badge badge-small" 
+                            [src]="ch.package == 1 ? '../../assets/icon/badge/silver-icon.png' :
+                            ch.package == 2 ? '../../assets/icon/badge/gold-icon.png' : 
+                            '../../assets/icon/badge/green-icon.png' "   />
+                            <h3>{{ch.username}}</h3>
+                            </div>
+                        </ng-container>
+                    
+                    </ion-col>
+                    <ion-col *ngIf="i == 1"> 
+                        <ng-container  *ngIf="ch !=  null">
+                        <span class="vertical-line line-top"></span>
+                        <span class="horizontal-line line-top line-left"></span>
+    
+                        <div class="badgeDiv" (click)="getBinary(ch.id)">
+                            <img class="badge badge-small" 
+                            [src]="ch.package == 1 ? '../../assets/icon/badge/silver-icon.png' :
+                            ch.package == 2 ? '../../assets/icon/badge/gold-icon.png' : 
+                            '../../assets/icon/badge/green-icon.png' "   />
+                            <h3>{{ch.username}}</h3>
+                        </div>
+                        </ng-container>
+                    </ion-col>
+
+                </ng-container>
+                
+        
+            </ion-row>
+
+
+<!-- 
+            <ng-container>
+
+          
             <ion-row>
-                <!-- <ion-col class="large-col"> 
-                  
-                </ion-col> -->
+         
                 <ion-col class="lg-col"> 
                     <span class="vertical-line line-bottom"></span>
 
@@ -37,9 +101,7 @@
                     <h2>Test Admin</h2>
                     </div>
                 </ion-col>
-                <!-- <ion-col class="large-col"> 
-                 
-                </ion-col> -->
+              
             </ion-row>
             <ion-row>
                 <ion-col> 
@@ -66,22 +128,17 @@
             <ion-row>
                 <ion-col  class="md-col"> 
                     <span class="vertical-line line-top line-long"></span>
-                    <!-- <span class="horizontal-line line-right"></span> -->
                     <div class="badgeDiv">
                         <span class="horizontal-line line-middle line-right line-short"></span>
-
                         <img class="badge badge-small" src="../../assets/icon/badge/green-icon.png" />
                         <h3>Sample Name 3</h3>
                     </div>
-                   
-                  
-                   
                 </ion-col>
                 <ion-col> 
 
                 </ion-col>
             </ion-row>
-
+        </ng-container> -->
 
         </ion-grid>
         

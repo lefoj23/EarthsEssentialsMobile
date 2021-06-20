@@ -15,15 +15,40 @@ import { NgModule } from '@angular/core';
 
 export class PrimeToastHelper{
    //public _messageService: MessageService;
+    public duration = 1500;
     constructor(public messageService: MessageService) {}
 
-    public SuccessTopCenter() {
-        console.log("hh")
-        this.messageService.add({ key: 'tc', severity: 'success', summary: 'TEST', detail: 'Message Content' });
+    public SuccessTopCenter(title,text) {
+        this.messageService.add({ key: 'tc', severity: 'success', life:this.duration, summary: title, detail: text,closable:false })
+     
     }
 
-    public SuccessSticky() {
-        this.messageService.add({ key: 'tc',severity: 'info', summary: 'Sticky', detail: 'Message Content', sticky: true });
+    public SuccessTopCenterCallback(title,text) {
+        const parent = this;
+        
+        //const messageService = this.messageService ;
+
+        return new Promise(function(resolve, reject){
+        parent.messageService.add({ key: 'tc', severity: 'success', life:parent.duration, summary: title, detail: text,closable:false })
+
+            setTimeout(() => resolve(  parent.messageService.clear()), parent.duration)
+            //resolve( true);
+           // messageService.add({ key: 'tc', severity: 'success', summary: title, detail: text,closable:false })
+
+        })
+    }
+
+   
+    public SuccessSticky(title,text) {
+        this.messageService.add({ key: 'tc', severity: 'info', life:this.duration, summary: 'Sticky', detail: 'Message Content', sticky: true ,closable:false });
+    }
+
+    public WarningTopCenter(title,text) {
+        this.messageService.add({ key: 'tc', severity: 'warn', life:this.duration, summary: title, detail: text,closable:false });
+    }
+
+    public ErrorTopCenter(title,text) {
+        this.messageService.add({ key: 'tc', severity: 'error', life:this.duration, summary: title, detail: text,closable:false });
     }
 
     //public static Success(title, text) {

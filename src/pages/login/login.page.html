@@ -9,13 +9,13 @@
         <h1>Log In</h1>
         <h2>Don't have an account yet? <a>Register here</a></h2>
         <ion-card-content>
-            <form >
+            <form [formGroup]="appForm" class="appForm">
             <div>
                 
                     <ion-item class="item-form">
    
                         <ion-label position="floating">Username</ion-label>
-                        <ion-input type="text"></ion-input>
+                        <ion-input type="text"  formControlName="username"></ion-input>
                     </ion-item>
     
     
@@ -24,7 +24,7 @@
                     <ion-item class="item-form">
                        
                         <ion-label position="floating">Password</ion-label>
-                        <ion-input type="password"></ion-input>
+                        <ion-input type="password"  formControlName="password"></ion-input>
                     </ion-item>
             
               
@@ -35,7 +35,7 @@
            
 
             <!-- <ion-button shape="round" size="large" (click)="Login()">{{itemLanguage.LoginBtn}}</ion-button> -->
-            <ion-button shape="round" size="large" (click)="Login()">Login</ion-button>
+            <ion-button shape="round" size="large" (click)="logIn()">Login</ion-button>
             
             <span>Forgot your password? <a>Click here</a></span>
 

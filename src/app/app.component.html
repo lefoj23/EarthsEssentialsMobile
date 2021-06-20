@@ -15,7 +15,7 @@
             <ion-item class="menuList userProfile">
                 <img class="userBadge" src="../../assets/avatar/avatar1.png" />
 
-                <span>TEST NAME</span>
+                <span *ngIf="userDetails">{{userDetails.firstName}} {{userDetails.lastName}}</span>
                 <ion-icon name="chevron-forward" slot="end" class="ion-float-right ion-margin-horizontal" (click)="openPage('/profile')"> </ion-icon>
 
             </ion-item>
@@ -46,7 +46,7 @@
 
     </ion-menu>
 
-    <p-toast position="top-center" key="tc"  [style]="{marginTop: '20px'}"></p-toast>
+    <p-toast position="top-center" key="tc"  ></p-toast>
 
     <ion-router-outlet id="main"></ion-router-outlet>
 

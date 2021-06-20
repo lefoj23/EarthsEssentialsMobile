@@ -9,6 +9,9 @@ import { HOME_LANGUAGE } from '../../app/languages/home.languages';
 import { COMMON_LANGUAGE } from '../../app/languages/common.languages';
 import * as _ from 'lodash';
 import * as moment from 'moment';
+import { UserDetails } from '../../app/interfaces/user-details.interface' 
+import { HomeActionCreator } from '../../app/action-creator/home.action-creator';
+
 
 //import { HeaderNav } from '../../app/header-nav/header-nav.component';
 
@@ -32,12 +35,13 @@ export class HomePage implements OnInit{
    //@ViewChild('headerNav') headerNav;
     @Input('header') header: any;
     public lastX:any;
+    public userDetails:UserDetails;
     public pageLanguage = _.find(HOME_LANGUAGE, { 'Code': AppLanguage.Code });
     public itemLanguage = this.pageLanguage.Items;
-    public headerText: any;
-    public firstName: any;
-    public lastName: any;
+    //public headerText: any;
+
     public clock: any;
+
     // PIE CHART
     public pieChartOptions: ChartOptions = {
         responsive: true,
@@ -87,13 +91,15 @@ export class HomePage implements OnInit{
     public barChartColors;
 
     constructor(private navCtrl: NavController,
+        private homeActionCreator: HomeActionCreator,
         private menu: MenuController,
-        private renderer: Renderer2,
-        ) {
+        private renderer: Renderer2, ) {
         this.setClock();
-        this.firstName = "Juan"
-        this.lastName = "Dela Cruz"
-        this.headerText = `${this.itemLanguage.Greetings} ${this.firstName} ${this.lastName}`;
+
+        this.userDetails = localStorage.getItem('userDetails') != null ? JSON.parse(localStorage.getItem('userDetails')) : null
+
+            console.log(this.userDetails )
+        //this.headerText = `${this.itemLanguage.Greetings} ${this.firstName} ${this.lastName}`;
 
 
         let primaryRGB = getComputedStyle(document.documentElement).getPropertyValue('--color-primary-rgb');
@@ -116,6 +122,8 @@ export class HomePage implements OnInit{
             },
         ];
         
+        this.homeActionCreator.GetDashboardData();
+
     }
 
     ngOnInit() {  }

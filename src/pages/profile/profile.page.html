@@ -20,9 +20,9 @@
     <ion-card>
         <div class="userBadgeDiv" >
             <img class="userBadge" src="../../assets/avatar/avatar1.png" />
-            <h1>TEST ADMIN</h1> 
+            <h1>{{userDetails.firstName}} {{userDetails.lastName}}</h1> 
          
-            <h2>testadmin@email.com</h2> 
+            <h2>{{userDetails.email}}</h2> 
             <h3>GOLD PACKAGE</h3> 
 
             <!-- <ion-button class="termsBtn" shape="round" >Open Terms & Conditions</ion-button> -->
@@ -38,21 +38,21 @@
                 
                     <ion-item class="item-form">
                         <ion-label position="floating">First Name</ion-label>
-                        <ion-input type="text" value="TEST FIRSTNAME"></ion-input>
+                        <ion-input type="text" value="{{userDetails.firstName}}"></ion-input>
                     </ion-item>
     
                     <ion-item class="item-form">
                         <ion-label position="floating">Middle Name</ion-label>
-                        <ion-input type="text" value="TEST MIDDLENAME"></ion-input>
+                        <ion-input type="text" value="{{userDetails.middleName}}"></ion-input>
                     </ion-item>
                     <ion-item class="item-form">
                         <ion-label position="floating">Last Name</ion-label>
-                        <ion-input type="text" value="TEST LASTNAME"></ion-input>
+                        <ion-input type="text" value="{{userDetails.lastName}}"></ion-input>
                     </ion-item>
     
                     <ion-item class="item-form">
                         <ion-label position="floating">Mobile Number</ion-label>
-                        <ion-input type="text" value="09*********"></ion-input>
+                        <ion-input type="text" value="{{userDetails.mobile}}"></ion-input>
                     </ion-item>
 
                     <ion-item class="item-form">

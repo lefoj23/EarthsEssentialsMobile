@@ -74,8 +74,8 @@
     --font-family-semibold: 'NotoSerif-Semibold';
     --font-family-bold: 'NotoSerif-Bold';
     --border-radius-size: 10px !important;
-
-
+    --highlight-color-focused: var(--color-tertiary2) !important;
+    --highlight-height: 1px !important;
     /*#region DefaultIonicCss*/
     //  // primary
     //  --ion-color-primary: #3880ff;
